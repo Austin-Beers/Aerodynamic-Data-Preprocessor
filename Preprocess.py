@@ -20,7 +20,6 @@ class PreprocessData:
         self.program_location = os.getcwd()
         self.list_files = (glob.glob(self.program_location +"/*.csv"))
         self.processDir()
-        # display(self.df_)
 
     def toDf(self, csv):
         temp_df = pd.read_csv(csv, index_col=False)
@@ -39,30 +38,5 @@ if __name__ == '__main__':
     run_script = PreprocessData()
     print(run_script.df_)
     
-
-# import pathlib
-# import numpy as np
-# import pandas as pd, shutil, os, time, glob 
-# import numba
-# import xlsxwriter
-# import datetime, calendar
-# import timeit
-
-# start = timeit.default_timer()
-# today = datetime.date.today()
-
-# program_location = os.getcwd()
-# print(program_location)
-
-# list_files = (glob.glob(program_location +"/*.csv"))
-# print(list_files)
-# for datafile in list_files:
-    
-#     temp_date_name = os.path.splitext(os.path.split(datafile)[1])[0]
-#     temp_data = pd.read_csv(datafile)
-    
-    
-# stop = timeit.default_timer()
-# print('Runtime: ', "{:.3f}".format(stop - start), " seconds")
 
    
